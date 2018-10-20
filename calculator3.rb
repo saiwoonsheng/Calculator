@@ -1,46 +1,30 @@
-puts "Enter First Number :"
-first = gets.chomp.to_i
-puts "Enter Second Number :"
-second= gets.chomp.to_i
-puts "Enter Operation ( + , - , * , / )"
-operator = gets.chomp
-if operator == "+"
-  print "#{first} + #{second} = "
-  puts first + second 
-elsif operator == "-"
-  print "#{first} - #{second} = "
-  puts first - second
-elsif operator == "*"
-  print "#{first} * #{second} = "
-  puts first * second 
-else
- print "#{first} / #{second} = "
- puts first / second 
+begin
+loop do   
+  puts "Enter first number :"
+  f = gets.chomp.to_i
+  puts "Enter second number :"
+  s = gets.chomp.to_i
+  puts "Enter Operation ( + , - , * , / )"
+  op = gets.chomp
+  if op == "+" 
+  print "#{f} + #{s} = "
+  puts f+s
+ elsif op == "-" 
+  print "#{f} - #{s} = "
+  puts f-s
+ elsif op == "*" 
+  print "#{f} * #{s} = "
+  puts f*s
+ elsif op == "/" 
+  print "#{f} / #{s} = "
+  puts f/s
 end
-loop do
-puts "Do You Want to Do Another ( y/n ) ?"
-i = gets.chomp
-if i == "y"
-  puts "Enter First Number :"
-first = gets.chomp.to_i
-puts "Enter Second Number :"
-second= gets.chomp.to_i
-puts "Enter Operation ( + , - , * , / )"
-operator = gets.chomp
-if operator == "+"
-  print "#{first} + #{second} = "
-  puts first + second 
-elsif operator == "-"
-  print "#{first} - #{second} = "
-  puts first - second
-elsif operator == "*"
-  print "#{first} * #{second} = "
-  puts first * second 
-else
- print "#{first} / #{second} = "
- puts first / second 
-end
-else
-    break
+  puts "Do You Want to Do Another ( y / n )? "
+  i = gets.chomp
+  break if i == "n"  
+rescue Exception => e
+puts e.message + " is error."
 end
 end
+
+   
